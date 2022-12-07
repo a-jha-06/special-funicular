@@ -3,6 +3,7 @@ import axios from "axios";
 import Search from "./components/Search";
 import Results from "./components/Results";
 import Detail from "./components/Detail";
+import Layout from '../layout/Layout'
 import "./App.css";
 
 function App() {
@@ -57,8 +58,12 @@ return (
 	<header className="App-header">
 		<h1>Movie Hub</h1>
 	</header>
+	
 	<main>
 		<Search searchInput={searchInput} search={search} />
+	<Layout>
+    //page content
+  </Layout>
 
 		<Results results={state.results} openDetail={openDetail} />
 
