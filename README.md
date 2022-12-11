@@ -1,4 +1,4 @@
-# MOVIE HUB ♥️ ReactJs
+# ♥️ MOVIE MANIA ♥️
 
 This project is bootstrapped for you with [Create React App](https://github.com/facebook/create-react-app).
 
