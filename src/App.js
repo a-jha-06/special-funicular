@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
+import AdminLogin from "./components/Admin/AdminLogin";
+import UserLogin from "./components/User/UserLogin";
+import Home from "./components/home/Home";
 import Search from "./components/Search";
 import Results from "./components/Results";
 import Detail from "./components/Detail";
@@ -67,6 +70,24 @@ return (
 		false
 		)}
 	</main>
+
+<Router>
+        <Header searchFunction={searchFunction} />
+        <Routes>
+          {account.email && account.userType === "Admin" ? (
+            <Route path="/admin/login" element={<AdminLogin />} exact />
+          ) : (
+            <Route path="/" element={<Home />} exact />
+          )}
+
+          {account.email && account.userType === "User" ? (
+            <Route path="/user/login" element={<UserLogin />} exact />
+          ) : (
+            <Route path="/" element={<Home />} exact />
+          )}
+        </Routes>
+      </Router>
+
 	</div>
 );
 }
