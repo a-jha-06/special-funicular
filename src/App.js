@@ -3,10 +3,7 @@ import axios from "axios";
 import Search from "./components/Search";
 import Results from "./components/Results";
 import Detail from "./components/Detail";
-import Login from "./components/Login";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { productInputs, userInputs } from "./formSource";
 function App() {
 const [state, setState] = useState({
 	s: "sherlock",
@@ -53,21 +50,6 @@ const closeDetail = () => {
 	return { ...prevState, selected: {} };
 	});
 };
-<BrowserRouter>
-        <Routes>
-          <Route path="/">
-          <Route index element={<Home />} />
-            <Route path="login" element={<Login />} />
-            
-            <Route path="taxi">
-              <Route index element={<List />} />
-              <Route path=":userId" element={<Single />} />
-              <Route
-                path="new"
-                element={<New inputs={userInputs} title="Taxi" />}
-              />
-            </Route>
-	</BrowserRouter>
 return (
 	<div className="App">
 	<header className="App-header">
