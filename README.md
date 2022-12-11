@@ -39,4 +39,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
+## Implementations left-out
+1.Login/Register page
+2. User & Admin functionality
 
+## Problems faced
+1. Lacking the practical knowledge of backend databse implementation.
